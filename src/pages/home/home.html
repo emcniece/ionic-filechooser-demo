@@ -8,11 +8,19 @@
 </ion-header>
 
 <ion-content padding>
-  <h3>Ionic Menu Starter</h3>
+  <h3>File Chooser Demo</h3>
 
   <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
+    Demonstrates the <a target="_blank" href="https://ionicframework.com/docs/native/file-chooser/">@ionic-native/file-chooser</a> package.
   </p>
 
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+  <button ion-button secondary (click)="openChooser()">Open File Chooser</button>
+
+  <ion-list>
+    <ion-item>
+      <ion-label stacked>File Selected</ion-label>
+      <ion-input type="text" [(ngModel)]="currentFile"></ion-input>
+    </ion-item>
+  </ion-list>
+
 </ion-content>
